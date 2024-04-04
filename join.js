@@ -7,10 +7,20 @@ document.querySelector(".btn-form").addEventListener("click" , (e)=>{
     localStorage.setItem('lastname' , lastnameValue);
     localStorage.setItem('password' , passwordValue);
 
-    Swal.fire({
-        icon: "success",
-        title: "success ...",
-        text: "ثبت نام با موفقیت انجام شد "
-    });
+        if (nameValue){
+        Swal.fire({
+            icon: "success",
+            title: "success ...",
+            text: "ثبت نام با موفقیت انجام شد "
+        });
+        
+    }else{
+        Swal.fire({
+            icon: "oops",
+            title: "oopss ...",
+            text: "ثبت نام با موفقیت انجام نشد "
+        });
+        
+    }
     
 })
